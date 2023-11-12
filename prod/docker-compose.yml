@@ -1,0 +1,50 @@
+version: "3.8"
+services:
+  mongodb:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ~/mongo:/data/db
+    ports:
+      - "127.0.0.1:27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
+      - MONGO_INITDB_DATABASE=imperials
+    restart: always
+
+  backend:
+    container_name: backend
+    image: radialapps/imperials:backend-latest
+    pull_policy: always
+    ports:
+      - "127.0.0.1:8090:8090"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8090
+      - ENVIRONMENT=${ENVIRONMENT}
+      - HMAC_SECRET=${HMAC_SECRET}
+      - SERVER_URL=${SERVER_URL}
+      - FRONTEND_URL=${FRONTEND_URL}
+      - SENTRY_DSN=${SENTRY_DSN}
+      - MONGO_URL=${MONGO_URL}
+      - RELEASE="0.0.1"
+    restart: always
+
+  ui:
+    container_name: ui
+    image: radialapps/imperials:ui-latest
+    pull_policy: always
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      - ENVIRONMENT=${ENVIRONMENT}
+      - NEXTAUTH_URL=${NEXTAUTH_URL}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+      - GOOGLE_ID=${GOOGLE_ID}
+      - GOOGLE_SECRET=${GOOGLE_SECRET}
+      - MONGO_URL=${MONGO_URL_NEXT}
+      - SENTRY_AUTH_TOKEN=${SENTRY_AUTH_TOKEN}
+      - SENTRY_DSN=${SENTRY_DSN_NEXT}
+      - NEXT_PUBLIC_SENTRY_DSN=${NEXT_PUBLIC_SENTRY_DSN}
+    restart: always

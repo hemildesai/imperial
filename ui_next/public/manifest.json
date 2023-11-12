@@ -1,0 +1,17 @@
+{
+    "id": "/",
+    "name": "Imperials!",
+    "short_name": "Imperials!",
+    "lang": "en-US",
+    "start_url": "/",
+    "display": "fullscreen",
+    "orientation": "landscape",
+    "theme_color": "#3A62BE",
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "500x500",
+            "type": "image/png"
+        }
+    ]
+}

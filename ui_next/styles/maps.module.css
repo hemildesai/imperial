@@ -1,0 +1,80 @@
+/* https://jtauber.github.io/articles/css-hexagon.html */
+
+.hex {
+    /* float: left; */
+    margin-left: 3px;
+    margin-bottom: -26px;
+}
+.hex .top {
+    width: 0;
+    border-bottom-width: 30px;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+}
+.hex .middle {
+    position: relative;
+    width: 104px;
+    height: 60px;
+}
+.hex .bottom {
+    width: 0;
+    border-top-width: 30px;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+}
+.hexrow {
+    clear: left;
+}
+.hexrow.even {
+    margin-left: 53px;
+}
+
+.port {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: #000;
+    cursor: pointer;
+    opacity: 10%;
+}
+
+.port:hover {
+    opacity: 70%;
+    background-color: red;
+}
+
+.port.l {
+    top: 26px;
+    left: -6px;
+}
+
+.port.tl {
+    top: -19px;
+    left: 17px;
+}
+
+.port.tr {
+    top: -19px;
+    left: 73px;
+}
+
+.port.r {
+    top: 26px;
+    left: 96px;
+}
+
+.port.bl {
+    top: 70px;
+    left: 23px;
+}
+
+.port.br {
+    top: 70px;
+    left: 68px;
+}
+
+.hasport {
+    background-color: red;
+    opacity: 1;
+}
