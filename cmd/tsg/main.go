@@ -253,7 +253,7 @@ func main() {
 
 	output += gen(reflect.TypeOf(game.StoreGameState{}))
 
-	err := os.WriteFile("ui_next/tsg.ts", []byte(output), 0644)
+	err := os.WriteFile("ui/tsg.ts", []byte(output), 0644)
 	if err != nil {
 		panic(err)
 	}

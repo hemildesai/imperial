@@ -1,5 +1,5 @@
 {
-    "name": "ui_next",
+    "name": "ui",
     "private": true,
     "scripts": {
         "dev": "next dev",
