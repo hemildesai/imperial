@@ -2,7 +2,7 @@
 
 Open source game with mechanics similar to Catan.
 
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fimperials.app&label=imperials.app)](https://imperials.app)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fimperials.radialapps.com&label=imperials.radialapps.com)](https://imperials.radialapps.com)
 [![Blog](https://img.shields.io/website?url=https%3A%2F%2Fblog.imperials.app&label=blog)](https://blog.imperials.app)
 [![License](https://img.shields.io/badge/license-AGPLv3-red)](./LICENSE)
 
